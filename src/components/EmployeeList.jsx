@@ -14,7 +14,7 @@ const EmployeeList = () => {
     }, []);
 
     return (
-        <div>
+        <div >
             <h1>Employee List</h1>
             <ul>
                 {employee.map((employee) =>(
