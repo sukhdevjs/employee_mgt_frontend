@@ -1,9 +1,11 @@
 import api from "./api";
 
+
+
 // import api from './api'; // Import the Axios instance
 
 // Fetch all employees from the backend
-export const fetchEmployee = async () => {
+export const getEmployee = async () => {
   try {
     const response = await api.get("");  // This resolves to GET /api/employee
     return response.data;  // Return the data (list of employees)
@@ -13,7 +15,7 @@ export const fetchEmployee = async () => {
   }
 };
 // Fetch a single employee by ID
-export const fetchEmployeeById = async (id) => {
+export const getEmployeeById = async (id) => {
     try {
       const response = await api.get(`/${id}`);  // This resolves to GET /api/employee/{id}
       return response.data;  // Return the employee data
@@ -53,10 +55,6 @@ export const updateEmployee = async (id, employeeData) => {
   
 
 
-// export const updateEmployee =async() =>{
-//     const response = await api.put('/employee/{id}')
-//     return response.data;
-// };
 
 // Delete an employee by ID
 export const deleteEmployee = async (id) => {
@@ -69,7 +67,3 @@ export const deleteEmployee = async (id) => {
     }
   };
   
-// export const deleteEmployee = async() =>{
-//     const response = await api.delete('/employee/{id}')
-//     return response.data;
-// };
